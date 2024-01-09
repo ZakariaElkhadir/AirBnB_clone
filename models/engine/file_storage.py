@@ -1,9 +1,13 @@
 #!/usr/bin/python3
 import json
-import os
+import os.path
 from models.base_model import BaseModel
 class FileStorage:
-    
+    """_summary_
+
+    Returns:
+        _type_: _description_
+    """
     __file_path = "file.json"
     __objects = {}
 
@@ -22,6 +26,7 @@ class FileStorage:
             json.dump(serialized_objects, file)
     
     def reload(self):
-        if os.path.exists(self.__file_path):
+        if os.path.exists(self.__file_path) is True:
             with open(self.__file_path, 'r') as file:
-                self.__objects = json.load(file)
+                for value in json.load(file).values():
+                    self.new(dct[value['__class__']](**value))
