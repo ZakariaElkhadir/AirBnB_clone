@@ -171,4 +171,4 @@ The recognizable commands by the interpreter are the following:
 
 Zakaria Elkhadir | Email: [zakariaelkhadir](mailto:zelkhadir5@gmail.com) 
 
-Bouslam Elmehdi | Github: [bouslamelmehdi](mailto:https://github.com/Mido-Hyuga)
+Bouslam Elmehdi | Github: [bouslamelmehdi](Https://github.com/Mido-Hyuga)
