@@ -12,17 +12,18 @@ class BaseModel:
     classes
     """
 
-    def __init__(self, *args, **kwargs)-> None:
+    def __init__(self, *args, **kwargs) -> None:
         """initialization of BaseModel class"""
         self.id = str(uuid4())
         self.created_at = datetime.now()
         self.updated_at = datetime.now()
-        
+
         if kwargs is not None:
             for key, value in kwargs.items():
-                print("%s == %s" %(key,value))
+                print("%s == %s" % (key, value))
                 if key in ["created_at, updated_at"]:
-                    self.__dict__[key] = strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
+                    self.__dict__[key] = strptime(
+                        value, "%Y-%m-%dT%H:%M:%S.%f")
                 elif key != __class__:
                     self.__dict__[key] = value
                 else:
