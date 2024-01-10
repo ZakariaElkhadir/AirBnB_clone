@@ -21,26 +21,25 @@ class BaseModel:
 
         if kwargs is not None:
             for key, value in kwargs.items():
-                print("%s == %s" % (key, value))
                 if key in ["created_at, updated_at"]:
-                    self.__dict__[key] = strptime(
+                    self.__dict__[key] = datetime.strptime(
                         value, "%Y-%m-%dT%H:%M:%S.%f")
                 elif key != __class__:
                     self.__dict__[key] = value
-                else:
-                    models.storage.new(self)
+        else:
+            models.storage.new(self)
 
-    def __str__(self):
+    def __str__(self) -> str:
         """Returns the string representation of an instance"""
         return "[{}] ({}) {}".format(
             self.__class__.__name__, self.id, self.__dict__)
 
-    def save(self):
+    def save(self) -> None:
         """set updated_at to now datetime"""
         self.updated_at = datetime.now()
         models.storage.save()
 
-    def to_dict(self):
+    def to_dict(self) -> dict:
         """returns the dictionary containing all keys/values"""
         ToDict = dict(self.__dict__)
         ToDict["__class__"] = self.__class__.__name__
