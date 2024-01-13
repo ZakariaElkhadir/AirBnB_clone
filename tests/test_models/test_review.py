@@ -4,6 +4,7 @@ import unittest
 from models.review import Review
 from datetime import datetime
 
+
 class ReviewTestCase(unittest.TestCase):
     """class for review test"""
     def test_review(self):
@@ -23,4 +24,7 @@ class ReviewTestCase(unittest.TestCase):
         self.assertIsInstance(rv.place_id, str)
         self.assertIsInstance(rv.user_id, str)
         self.assertIsInstance(rv.text, str)
-        
+
+
+if __name__ == "__main__":
+    unittest.main()
