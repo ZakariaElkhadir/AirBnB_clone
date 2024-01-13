@@ -1,0 +1,19 @@
+#!/usr/bin/python3
+
+"""description"""
+
+
+from models.base_model import BaseModel
+
+
+class User(BaseModel):
+    """_summary_
+
+    Args:
+        BaseModel (_type_): _description_
+    """
+
+    email = ''
+    password = ''
+    first_name = ''
+    last_name = ''
