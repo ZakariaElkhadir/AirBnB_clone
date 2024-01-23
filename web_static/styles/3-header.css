@@ -3,6 +3,10 @@ header {
     height: 70px;
     width: 100%;
     border-bottom: 1px solid #cccccc;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
 }
 header #logo {
     background-image: url(../images/logo.png);
