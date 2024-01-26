@@ -87,3 +87,38 @@
 .places .user span {
     font-weight: bold;
 }
+.places .amenities {
+    margin-top: 40px;
+    text-align: left;
+    
+}
+.places .amenities h2 {
+    
+    border-bottom: 1px solid #DDDDDD;
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+.places .amenities ul {
+    list-style-type: none;
+    padding: 0;
+}
+.places .amenities li {
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: left center;
+    padding-left: 40px;
+    margin-top: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+
+}
+.places .amenities .tv {
+    background-image: url(../images/icon_tv.png);
+}
+.places .amenities .pet {
+    background-image: url(../images/icon_pets.png);
+}
+.places .amenities .wifi {
+    background-image: url(../images/icon_wifi.png);
+}
